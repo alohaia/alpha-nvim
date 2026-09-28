@@ -80,6 +80,7 @@ end
 
 local get_fortune = function(fortune_list)
     -- selects an entry from fortune_list randomly
+    math.randomseed(os.time())
     local ind = math.random(1, #fortune_list)
     return fortune_list[ind]
 end
